@@ -145,7 +145,7 @@ export const likeUnlikePost = async (req, res) => {
       await post.save();
 
       const notification = new Notification({
-        from: userId,
+        form: userId,
         to: post.user,
         type: "like",
       });
