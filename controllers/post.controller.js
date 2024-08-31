@@ -50,10 +50,15 @@ export const createPost = async (req, res) => {
     const newPost = new Post({
       user: userId,
       text,
+      // text:text,
       img: imgUrl,
     });
 
+    
+
     await newPost.save();
+
+    // Post.create(newPost);
 
     res.status(201).json(newPost);
   } catch (error) {
